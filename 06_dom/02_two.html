@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+</head>
+<body style="background-color: #212121; color:#fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thusday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+<script>
+    //select all element using parent div class
+    const parent = document.querySelector('.parent');
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[0].innerHTML);
+
+    //html collection in for loop
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);
+    }
+
+    //change style
+    parent.children[1].style.color="orange";
+
+    //call firstElementChild method =>
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+    console.log(document.querySelector('.day'));
+    console.log(document.querySelector('.day').parentElement);
+    console.log(document.querySelector('.day').nextElementSibling);
+
+    console.log('nodes:',parent.childNodes);    
+</script>
+</html>
